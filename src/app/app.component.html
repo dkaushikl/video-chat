@@ -1,5 +1,31 @@
-<h1>My id - {{mypeerid}}</h1>
-<input type="text" [(ngModel)]="anotherid">
-<button (click)="connect()">Connect</button>
-<button (click)="videoconnect()">VideoChat</button>
-<video #myvideo></video>
+<div class="pure-g">
+    <!-- Video area -->
+    <div class="pure-u-1" id="video-container">
+        <video #theirVideo id="theirVideo" autoplay></video>
+        <video #myVideo id="myVideo" muted="true" autoplay></video>
+    </div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1">
+        <div class="call-container">
+            <div class="pure-forms">
+                <input type="text" placeholder="Call user id..." [(ngModel)]="anotherPeersId" id="callto-id">
+                <a class="pure-button pure-button-success" (click)="VideoCall()" id="make-call">Call</a>
+                <!-- <a class="pure-button pure-button-error" (click)="EndVideoCall()" id="end-call">End call</a> -->
+                <a class="pure-button pure-button-warning" (click)="MuteMe()" id="end-call">Mute Me</a>
+                <a class="pure-button pure-button-warning" (click)="UnMuteMe()" id="end-call">UnMute Me</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1">
+        <div class="alert alert-info">
+            <p>Share this id with others so they can call you.
+                <span class="pull-right" id="my-id">Call ID: {{myPeerId || "..."}}</span>
+            </p>
+        </div>
+    </div>
+</div>

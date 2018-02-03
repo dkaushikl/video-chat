@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-
-
+import { OpenviduComponent } from './openvidu/openvidu.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OpenviduComponent
   ],
   imports: [
     BrowserModule,

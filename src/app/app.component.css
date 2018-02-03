@@ -1,0 +1,9 @@
+#remoteVideos video {
+    height: 150px;
+    border: 1px solid red;
+}
+
+#localVideo {
+    height: 150px;
+    border: 1px solid blue;
+}
